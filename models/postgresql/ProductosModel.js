@@ -1,4 +1,4 @@
-import client from "../../connection/postgresql/postgresqlConnection.js"; // Importa el cliente de PostgreSQL
+import client from "../../connection/postgresql/postgresqlconnection.js"; // Importa el cliente de PostgreSQL
 class ProductosModel {
     static async getAllProductos() {
         try {
