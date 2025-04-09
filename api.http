@@ -7,19 +7,19 @@ Content-Type: application/json
 
 {
   "nombre": "Monitor",
-  "precio": 505.0,
+  "precio": 600,
   "stock": 70,
   "estado": "disponible"
 }
 
 ###
-PATCH http://localhost:3000/productos/6df2e0ba-14d6-11f0-ac50-8469936dea8b
+PATCH http://localhost:3000/productos/895fb1a6-50d5-447e-a4eb-608981bba86f
 Content-Type: application/json
 
 {
-  "nombre": "Monitor editado",
+  "nombre": "Mouse editado",
   "estado": "No disponible"
 }
 
 ###
-DELETE http://localhost:3000/productos/6df2e0ba-14d6-11f0-ac50-8469936dea8b
+DELETE http://localhost:3000/productos/97428a1f-72d1-4dbb-a46f-15823249ca01

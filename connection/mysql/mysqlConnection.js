@@ -11,6 +11,7 @@ const config = {
     database: process.env.DB_NAME,
 }
 
+
 const connection = await mysql.createConnection(config);
 
 export default connection;
