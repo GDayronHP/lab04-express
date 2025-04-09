@@ -11,6 +11,20 @@ const config = {
     database: process.env.DB_NAME,
 }
 
+const createTableQuery = `
+  CREATE TABLE IF NOT EXISTS productos (
+    id binary(16) PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
+    nombre VARCHAR(100) NOT NULL UNIQUE,
+    precio INT NOT NULL,
+    stock INT NOT NULL,
+    estado VARCHAR(100) NOT NULL
+  );
+`;
+
+
 const connection = await mysql.createConnection(config);
+
+await connection.query(createTableQuery);
+console.log("Tabla 'productos' asegurada en la base de datos.");
 
 export default connection;

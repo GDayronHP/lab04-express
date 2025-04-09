@@ -16,7 +16,5 @@ COPY . .
 # 6. Exponer el puerto (ajústalo si tu app usa otro)
 EXPOSE 3000
 
-CMD ["node", "init_db.js"]
-
 # 7. Comando para iniciar la app
-CMD ["nodemon", "app.js"]
+CMD ["./start.sh"]
