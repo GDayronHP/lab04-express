@@ -1,4 +1,4 @@
-import ProductosModel from "../models/productosModel.js";
+import ProductosModel from "../models/postgresql/ProductosModel.js";
 
 class ProductosController {
     static async getAllProductos(req, res) {

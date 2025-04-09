@@ -1,4 +1,4 @@
-import connection from "../connection/mysql/mysqlConnection.js";
+import connection from "../../connection/mysql/mysqlConnection.js";
 
 class ProductosModel {
     static async getAllProductos() {
