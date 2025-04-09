@@ -1,0 +1,25 @@
+###
+GET http://localhost:3000/productos/
+
+###
+POST http://localhost:3000/productos/
+Content-Type: application/json
+
+{
+  "nombre": "Monitor",
+  "precio": 505.0,
+  "stock": 70,
+  "estado": "disponible"
+}
+
+###
+PATCH http://localhost:3000/productos/6df2e0ba-14d6-11f0-ac50-8469936dea8b
+Content-Type: application/json
+
+{
+  "nombre": "Monitor editado",
+  "estado": "No disponible"
+}
+
+###
+DELETE http://localhost:3000/productos/6df2e0ba-14d6-11f0-ac50-8469936dea8b

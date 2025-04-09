@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS productos (
+    id BINARY(16) PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
+    nombre VARCHAR(100) NOT NULL UNIQUE,
+    precio INT NOT NULL,
+    stock INT NOT NULL,
+    estado VARCHAR(100) NOT NULL
+);
