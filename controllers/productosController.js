@@ -11,6 +11,20 @@ class ProductosController {
         }
     }
 
+    static async getProductoById(req, res) {
+        try {
+            const id = req.params.id;
+            const producto = await ProductosModel.getProductoById(id);
+            if (!producto) {
+                return res.status(404).json({ error: "Producto not found" });
+            }
+            res.status(200).json(producto);
+        } catch (error) {
+            console.error("Error fetching producto by ID:", error);
+            res.status(500).json({ error: "Internal server error" });
+        }
+    }
+
     static async insertProducto(req, res) {
         try {
             const producto = req.body;

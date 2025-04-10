@@ -1,5 +1,5 @@
 # 1. Imagen base
-FROM node:18
+FROM node:23-slim
 
 # 2. Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # 7. Comando para iniciar la app
-CMD ["./start.sh"]
+CMD ["npm", "run", "dev"]

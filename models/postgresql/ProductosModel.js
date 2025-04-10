@@ -10,6 +10,19 @@ class ProductosModel {
         }
     }
 
+    static async getProductoById(id) {
+        try {
+            const res = await client.query("SELECT id, nombre, precio, stock, estado FROM productos WHERE id = $1", [id]);
+            if (res.rows.length === 0) {
+                return { message: "Producto not found" };
+            }
+            return res.rows[0];
+        } catch (error) {
+            console.error("Error fetching producto by ID:", error);
+            throw error;
+        }
+    }
+
     static async insertProducto(body) {
         const keys = Object.keys(body);
         const values = Object.values(body);
